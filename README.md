@@ -1,2 +1,2 @@
-# notes
-Notes
+# My notes
+My Notes
