@@ -1,0 +1,10 @@
+
+* * * * * gilles /home/gilles/monitor/ping/run1
+*/5 * * * * gilles /home/gilles/monitor/ping/run5
+
+* * * * * gilles /home/gilles/monitor/http/run1
+*/5 * * * * gilles /home/gilles/monitor/http/run5
+
+* * * * * gilles /home/gilles/monitor/https/run1
+*/5 * * * * gilles /home/gilles/monitor/https/run5
+

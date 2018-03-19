@@ -1,0 +1,14 @@
+#!/bin/bash
+[ $# == 1 ] && ip=$1 || { echo "usage : #> %0 <ip>"; return 1; }
+day=`date +%Y/%m/%d`
+hour=`date +%H.%M.%S`
+mkdir -p $ip/$day
+file="$ip/$day/$hour"
+curl -I $ip -o $file
+if [ $? == 0 ]; then
+res=`cat $file | sed -e '/HTTP/!d'`
+else
+res=0
+fi
+echo res=$res
+redis-cli SET "http|$ip|$day|$hour" "$res"
